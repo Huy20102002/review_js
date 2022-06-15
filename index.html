@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CallBack - Promise</title>
+</head>
+
+<body>
+    <script>
+         // 
+        //function test() {
+            // Đây là code đồng bộ
+            // console.log(1);
+            // console.log(2);
+            // console.log(3);
+            // Còn đây là code k đồng bộ
+        //    setTimeout(() => {
+          //      console.log(1);
+            //}, 0)
+            //console.log(2);
+            //console.log(3);
+            //  
+        //}
+        //test();
+        // Bất đồng bộ trong js có 2 loại chính là: brower api và web api
+        //  sẽ cung cấp cho ta các function,events để xử lí bất đồng bộ: setTimeout(),setInterval(),click,scroll,...events
+        // Promises: Các đối tượng Js để thực hiện các tác vụ bất đồng bộ
+        // Callback: là hàm,Được truyền qua đối số của 1 function khác
+        function myFunction(value){
+            if(typeof value == 'function'){
+                value('Bùi Tiến Huy')
+            }else{
+                console.log("Đây không phải function")
+            }
+        }
+        function myCallback(value){
+            console.log('Value',value);
+        }
+        myFunction(myCallback)
+        // Promises: 1 phiên bản ở Es6 <Đây là 1 object contructor
+        // Promises: là 1 khái niệm sinh ra để xử lí  nguyên tắc bất đồng bộ,trước khi 
+         // có promies thì chúng ta sẽ thường sử dụng callback và callback nó sẽ xảy ra 1 vấn đề 
+        // Đó là callback heo ,nó sẽ rất khó nhìn,code bị rối,nên là thằng promises sinh ra ở es6 để giúp
+        // code k bị sâu vào,đọc khó hiểu hơn,để sử dụng promises thì sử dụng từ khóa new với Promise trong
+        // contructor sẽ truyền vào 1 executor fucntion  trong executor function sẽ nhận 2 tham số là resolve,reject 
+        //   
+          /*  var promise = new Promise(
+                function(resolve,reject){
+                    resolve();
+                }
+            ); 
+        promise.then(()=>{
+            // Khi thằng resolve được gọi
+            console.log("Succesfully");
+        }).catch(()=>{
+            console.log("Failed");
+            //Khi reject được gọi
+        }).finally(()=>{
+            console.log("Done !");
+            // khi 1 trong 2 thằng thì finally đều được gọi
+        })
+        */
+       /*
+        const currentPromise = new Promise((resolve, reject) => {
+            let condition = true;
+            if (condition) {
+                setTimeout(() => {
+                    resolve("Success");
+                }, 2000)
+            } else {
+                reject("Error");
+            }
+        });
+        currentPromise.then((data)=>{
+            console.log(data);
+        }).catch(err=>{
+            console.log(err);
+        })
+       */
+       // Async Await
+
+    </script>
+</body>
+
+</html>

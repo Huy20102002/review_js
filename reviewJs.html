@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variable and Scope</title>
+</head>
+<body>
+    <!-- 
+        Khai báo biến trong Javascript:
+        Có ba 3 cách khai báo biến: dùng từ khóa let,var,const và tùy vào cách khai báo cho 
+        phù hợp 
+        let: biến này chỉ có phạm vi trong khối khai báo. phạm vi này ta gọi là block scope
+        const: đây là 1 hằng số, vì vậy khi khai báo biến const thì chúng ta phải gắn giá trị 
+        cho nó luôn,biến này thì không thay đổi được giá trị.< nếu mà cố tình thay đổi giá 
+        trị của biến sẽ bị lỗi>
+
+        + block scope : đây là 1 khối,nghĩa là chỉ hoạt động trong phạm vi được khai báo bởi cặp nhọn {}
+     -->
+     <!-- 
+        Kiểu dữ liệu trong Javascript: trong javascript có những kiểu dữ liệu cơ bản sau:
+        string,number,boolean,object,undefined,array.
+        + string: là 1 tập hợp các kí tự được viết bên trong dấu ngoặc kép hoặc dấu ngoặc đơn
+        + number: là tập hợp các của các số
+        + boolean: chỉ có thể nhận một trong 2 giá trị đó là true or false
+        + object: là 1 tập hợp những cái tên và mỗi cái tên sẽ chứa đựng một giá trị dữ liệu
+        + undefined: kki một biến khai báo mà không chứa giá trị thì đó là kiểu giá trị undefined
+        + array: đây được gọi là 1 mảng chứa nhiều giá trị,mỗi giá trị được coi là 1 phần tử của mảng
+      -->
+      <!-- 
+        Times fucntions trong javascript: đây là những hàm dùng để hẹn giờ
+        + setTimeout: function này nhận 2 tham số (functions ,time),dùng để thiết lập một khoảng thời gian nào đó sẽ thực hiện 1 
+        nhiệm vụ nào đó và nó chỉ thực hiện đúng 1 lần,
+        + setInterval: hàm này thì có cú phám và chức năng giống setTimeout,tuy nhiên hàm này thì số lần thực hiện sẽ mãi mãi
+       -->
+       <!-- 
+        Toán tử so sánh trong javascript: == đây là so sánh bằng nhau,=== so sánh bằng nhau và cả kiểu giữ liệu
+        -->
+        <!-- 
+            Class and Objects: 
+         -->
+         <!-- 
+            1.2 Document Objects Model 
+            - Dom là một giao diện lập trình ứng dụng để thao tác với các tài liệu HTML
+            1.2.1: Làm việc với cây dom trong trình duyệt
+            -
+            1.2.2: DOM selector
+            - Dom trong html có sẵn dưới các dạng các thuộc tính của document
+            1.2.3: HTML element
+            
+            1.2.4: Mouse event
+            sự kiện này xảy ra khi người dùng tương tác với con trỏ (các sự kiện phổ biến trong này bao gồm click,dblclick,mouseup,mousedown)
+            để sử dụng sự kiện này : có 3 cách: sử dụng mã html->thêm vào 1 mã html bất kì
+            cách 2: sử dụng Javascript
+            Cách 3: addEventlistener: chúng ta có thể sử dụng hàm addEventListenter để thêm sự kiện 
+            vào một đối tượng html
+            1.2.5: Input  event
+            Có các sự kiện như onclick
+            1.2.6: local storage
+            Local storage là một loại lưu trữ web cho phép các trang web và ứng dụng javascript lưu trữ và truy cập dữ
+            liệu ngay trong trình duyệt mà không có ngày hết hạn,dữ liệu được lưu trữ trong trình duyệt sẽ tồn tại ngay cả khi đóng cửa sổ trình duyệt,dữ liệu chỉ mất khi bạn sử dụng chức năng clear history của trình duyệt hoặc sử dụng localstorage API để xóa
+            - trong localstorage sẽ có 4 phương thức chính: setItem() là để gán dữ liệu,getItem() để lấy dữ liệu,removeItem() để xóa dữ liệu khỏi localstorage,clear() để xóa toàn bộ dữ liệu.
+          -->
+          <!-- 1.3 call HTTP api
+           1.3.1 kết nối với server bằng http api
+
+           1.3.2 Async concept <Bất đồng bộ>
+           - bất đồng bộ là code trương chình không được tuần tự,nhiều lệnh có thể thực hiện cùng lúc.
+           1.3.3 Working with Json
+           - json là một định dạng chung để biểu diễn các giá trị và object
+           - json có  phương thức là: json.stringify(): chuyển object thành string,json.parse() chuyển string thành object
+           1.3.4 ES6 promise
+            // Promises: 1 phiên bản ở Es6 <Đây là 1 object contructor
+        // Promises: là 1 khái niệm sinh ra để xử lí  nguyên tắc bất đồng bộ,trước khi 
+         // có promies thì chúng ta sẽ thường sử dụng callback và callback nó sẽ xảy ra 1 vấn đề 
+        // Đó là callback heo ,nó sẽ rất khó nhìn,code bị rối,nên là thằng promises sinh ra ở es6 để giúp
+        // code k bị sâu vào,đọc khó hiểu hơn,để sử dụng promises thì sử dụng từ khóa new với Promise trong
+        // contructor sẽ truyền vào 1 executor fucntion  trong executor function sẽ nhận 2 tham số là resolve,reject 
+        //   
+           1.3.5 Fetch Api
+           Featch api là một api đơn giản cho việc gửi và nhận request bằng js.fetch sẽ trả về một promise,có trạng thái
+           là resolves với giá trị là response cho resquest đó.respose sẽ được truyền tới .then đây là nơi có thể sữ dụng response ,nếu request không thành công thì sẽ chuyển tới .catch với tham số lỗi tương ứng.
+          -->
+       
+       
+    <script>
+        // USING Fetch API
+         // Method get
+        function getRequest(url){
+            return fetch(url,{
+                method: "GET",
+                headers: new Headers({
+                    "Content-Type": "application/json"
+                })
+            })
+            .then(response=>response.json());
+        }
+        const url = 'https://corona.lmao.ninja/v2/countries/vn';
+        getRequest(url).then(data=>console.log(data))
+      // method post
+      /*function postRequest(url,data){
+        return fetch(url,{
+            method: "POST",
+            body: JSON.stringify(data),
+            headers: new Headers({
+                "Content-Type": "application/json"
+            })
+        }).then(response=>response.json());
+      }*/
+    </script>
+</body>
+</html>
